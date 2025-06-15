@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thẻ tập gym: ưu đãi thẻ tập mua 1 tặng 1, hè đến khuyến mãi gym tháng 6</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* General Product Hover Effect */
+    .product:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Add subtle shadow on hover */
+    }
+
+    /* Slideshow Specific CSS */
+    .mySlides {
+        display: none;
+    }
+
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    .dot.active {
+        background-color: #ef4444; /* Tailwind 'red-500' */
+    }
+
+    /* Chatbox Specific CSS */
+    #chatbox-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    #chatbox-toggle {
+      background-color: #dc2626; /* red-600 */
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease-in-out;
+    }
+    #chatbox-toggle:hover {
+        transform: scale(1.05);
+    }
+
+    #chatbox {
+      width: 320px;
+      height: 400px;
+      background-color: #fef2f2; /* red-50 (rất nhạt) */
+      border-radius: 8px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      margin-top: 10px;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(20px); /* Initial slight offset */
+      opacity: 0; /* Initial hidden state for animation */
+    }
+
+    #chatbox.show { /* Use .show class for visible state */
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #chatbox-header {
+      background-color: #dc2626; /* red-600 */
+      color: white;
+      padding: 10px 15px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    #chatbox-messages {
+      flex-grow: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background-color: #ffffff; /* White */
+      display: flex;
+      flex-direction: column; /* Ensure messages stack vertically */
+    }
+
+    .chatbox-message {
+      margin-bottom: 10px;
+      padding: 8px 12px;
+      border-radius: 12px;
+      max-width: 80%;
+      word-wrap: break-word; /* Ensure long words break */
+      font-size: 0.9rem;
+    }
+
+    .chatbox-message.user {
+      background-color: #fee2e2; /* red-100 */
+      color: #1f2937; /* gray-900 */
+      align-self: flex-end; /* Align user messages to the right */
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .chatbox-message.bot {
+      background-color: #ef4444; /* red-500 */
+      color: white;
+      align-self: flex-start; /* Align bot messages to the left */
+      margin-right: auto;
+      text-align: left;
+    }
+
+    #chatbox-input-area {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #fca5a5; /* red-300 */
+      background-color: #fef2f2; /* red-50 */
+    }
+
+    #chatbox-input {
+      flex-grow: 1;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #f87171; /* red-400 */
+      background-color: #ffffff; /* white */
+      color: #1a202c; /* gray-900 */
+      margin-right: 10px;
+    }
+
+    #chatbox-send-button {
+      background-color: #ef4444; /* red-500 */
+      color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+    #chatbox-send-button:hover {
+        background-color: #dc2626; /* red-600 */
+    }
+    body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f8f8; /* Nền sáng, sạch */
+            color: #333333;
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .hero-section {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6s2l3x-a4z8K2j5h_w4yS5x0W3J8y3R4h_g&s'); /* Thay bằng ảnh nền hero của bạn */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 50vh; /* Chiều cao hero */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(185, 28, 28, 0.7) 0%, rgba(220, 38, 38, 0.9) 100%); /* Overlay đỏ đậm */
+        }
+        h1 {
+            font-size: 3.5rem; /* text-6xl */
+            font-weight: 900; /* font-extrabold */
+            line-height: 1.2;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        h2 {
+            font-size: 2.5rem; /* text-4xl */
+            font-weight: 800; /* font-extrabold */
+            color: #b91c1c; /* Đỏ đậm */
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+        h3 {
+            font-size: 1.75rem; /* text-3xl */
+            font-weight: 700;
+            color: #b91c1c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .member-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+        .card-header {
+            background-color: #b91c1c; /* Đỏ đậm */
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.75rem; /* text-3xl */
+            text-transform: uppercase;
+        }
+        .card-price {
+            padding: 1rem 1.5rem;
+            text-align: center;
+            font-size: 2.5rem; /* text-5xl */
+            font-weight: 900;
+            color: #ef4444; /* Đỏ tươi */
+        }
+        .card-price span {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600;
+            color: #555;
+            display: block;
+        }
+        .card-body {
+            padding: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-body p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+        .card-benefits ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        .card-benefits li {
+            display: flex;
+            align-items: flex-start; /* Align icon to top of text */
+            margin-bottom: 0.75rem;
+            color: #444;
+            font-size: 0.95rem;
+        }
+        .card-benefits li svg {
+            margin-right: 0.75rem;
+            color: #ef4444; /* Icon màu đỏ */
+            min-width: 20px;
+            margin-top: 0.2em; /* Adjust to align with text */
+        }
+        .card-footer {
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        .btn-select {
+            background-color: #ef4444; /* red-500 */
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 9999px; /* full rounded */
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .btn-select:hover {
+            background-color: #dc2626; /* red-700 */
+            transform: translateY(-2px);
+        }
+        .feature-box {
+            background-color: #fff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .feature-box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+        .feature-box h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #b91c1c;
+            margin-bottom: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #ef4444;
+            padding-bottom: 0.5rem;
+        }
+        .feature-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-box li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+            color: #444;
+            font-size: 1rem;
+        }
+        .feature-box li svg {
+            margin-right: 0.75rem;
+            color: #ef4444;
+            min-width: 20px;
+            margin-top: 0.3em;
+        }
+        .faq-item {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            font-weight: 700;
+            color: #b91c1c;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-answer {
+    padding: 0 1.5rem; /* Giữ padding trái phải, loại bỏ padding trên dưới mặc định */
+    color: #444;
+    line-height: 1.6;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out; /* Đảm bảo transition cho padding */
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Sẽ được JavaScript ghi đè, nhưng giữ nó ở đây làm fallback */
+    padding-top: 1rem; /* Thêm padding trên khi active */
+    padding-bottom: 1rem; /* Thêm padding dưới khi active */
+}
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+        .faq-question svg {
+            transition: transform 0.3s ease;
+        }
+        .text-link {
+            color: #ef4444;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .text-link:hover {
+            text-decoration: underline;
+        }
+        .company-info {
+            background-color: #f0f0f0;
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-top: 4rem;
+        }
+        .company-info p, .company-info ul {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .company-info ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .company-info li a {
+            color: #ef4444;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .company-info li a:hover {
+            text-decoration: underline;
+        }
+  </style>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-red-700 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">CORE FITNESS & YOGA CENTER</h1>
+      <button onclick="viewCart()" class="bg-white text-red-700 px-4 py-2 rounded hover:bg-red-100 font-semibold transition duration-200 ease-in-out">
+        🛒 Giỏ hàng (<span id="cart-count">0</span>)
+      </button>
+    </div>
+  </header>
+
+  <div class="slideshow-container relative w-full overflow-hidden">
+      <div class="mySlides fade">
+          <img src="10.png" class="w-full h-auto object-cover max-h-96" alt="Slide 1">
+          <div class="text-overlay absolute inset-0 flex items-center justify-center bg-red-700 bg-opacity-40 text-white text-3xl font-bold text-center p-4">Tập luyện không giới hạn, vươn tới mục tiêu</div>
+      </div>
+
+      <div class="mySlides fade">
+          <img src="11.png" class="w-full h-auto object-cover max-h-96" alt="Slide 2">
+          <div class="text-overlay absolute inset-0 flex items-center justify-center bg-red-700 bg-opacity-40 text-white text-3xl font-bold text-center p-4">Ưu đãi độc quyền cho thành viên mới, đăng ký ngay!</div>
+      </div>
+
+      <div class="mySlides fade">
+          <img src="slide.jpeg" class="w-full h-auto object-cover max-h-96" alt="Slide 3">
+          <div class="text-overlay absolute inset-0 flex items-center justify-center bg-red-700 bg-opacity-40 text-white text-3xl font-bold text-center p-4">Khám phá các lớp GroupX sôi động, bứt phá năng lượng</div>
+      </div>
+
+      <a class="prev absolute top-1/2 left-4 -translate-y-1/2 bg-red-700 bg-opacity-50 text-white p-3 rounded-full cursor-pointer text-2xl z-10 hover:bg-red-800 transition duration-200">&#10094;</a>
+      <a class="next absolute top-1/2 right-4 -translate-y-1/2 bg-red-700 bg-opacity-50 text-white p-3 rounded-full cursor-pointer text-2xl z-10 hover:bg-red-800 transition duration-200">&#10095;</a>
+
+      <div class="dots-container absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+          <span class="dot h-3 w-3 bg-red-300 rounded-full cursor-pointer" onclick="currentSlide(1)"></span>
+          <span class="dot h-3 w-3 bg-red-300 rounded-full cursor-pointer" onclick="currentSlide(2)"></span>
+          <span class="dot h-3 w-3 bg-red-300 rounded-full cursor-pointer" onclick="currentSlide(3)"></span>
+      </div>
+  </div>
+
+  <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
+    <div class="bg-white text-gray-900 rounded-lg p-6 w-full max-w-2xl relative">
+      <h2 class="text-2xl font-bold mb-4 text-red-700">🛒 Giỏ hàng của bạn</h2>
+      <div id="cart-items" class="mb-4 space-y-2"></div>
+      <p class="font-bold mb-4">Tổng cộng: <span id="cart-total">0đ</span></p>
+
+      <h3 class="text-xl font-bold mb-2 text-red-600">Thông tin khách hàng</h3>
+      <input type="text" placeholder="Họ và tên" id="customer-name" class="w-full border p-2 mb-2 rounded border-gray-300 focus:border-red-500 focus:ring-red-500" />
+      <input type="text" placeholder="Số điện thoại" id="customer-phone" class="w-full border p-2 mb-2 rounded border-gray-300 focus:border-red-500 focus:ring-red-500" />
+      <input type="text" placeholder="Email" id="customer-email" class="w-full border p-2 mb-4 rounded border-gray-300 focus:border-red-500 focus:ring-red-500" />
+
+      <h3 class="text-xl font-bold mb-2 text-red-600">Phương thức thanh toán</h3>
+      <select id="payment-method" class="w-full border p-2 mb-4 rounded border-gray-300 focus:border-red-500 focus:ring-red-500" onchange="toggleQrCode()">
+        <option value="bank-transfer">Chuyển khoản ngân hàng</option>
+        <option value="cash">Thanh toán khi đến phòng gym</option>
+        <option value="e-wallet">Ví điện tử (Momo/ZaloPay)</option>
+      </select>
+
+      <div id="qr-code-section" class="mb-4 text-center hidden">
+        <h4 class="text-lg font-semibold mb-2 text-red-500">Quét mã QR để thanh toán</h4>
+        <img id="qr-code-image" src="" alt="Mã QR thanh toán" class="w-48 h-48 mx-auto border border-gray-300 rounded-lg p-2">
+        <p id="qr-code-info" class="text-sm text-gray-600 mt-2"></p>
+      </div>
+
+      <div class="flex justify-between">
+        <button onclick="closeCart()" class="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300 transition duration-200">❌ Đóng</button>
+        <button onclick="checkout()" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-200">✅ Thanh toán</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col md:flex-row">
+    <aside class="w-full md:w-64 bg-red-700 text-red-100 p-6 hidden md:block">
+      <h2 class="text-xl font-bold mb-4 text-white">Danh Mục</h2>
+      <ul class="space-y-2">
+        <li class="group relative">
+          <div class="flex justify-between items-center cursor-pointer hover:text-white transition duration-200">
+            <span>Danh sách CLB</span>
+            <span class="transition-transform duration-200 group-hover:rotate-180">▼</span>
+          </div>
+          <ul class="ml-2 bg-red-800 rounded shadow-lg hidden group-hover:block z-10 p-2 text-sm text-red-100 space-y-1">
+            <li><a href="quan1.html" class="block hover:text-white transition duration-200">CLB Quận 1</a></li>
+            <li><a href="qun3.html" class="block hover:text-white transition duration-200">CLB Quận 3</a></li>
+            <li><a href="quan9.html" class="block hover:text-white transition duration-200">CLB Thủ Đức</a></li>
+          </ul>
+        </li>
+
+        <li class="group relative">
+          <div class="flex justify-between items-center cursor-pointer hover:text-white transition duration-200">
+            <span>Lịch tập</span>
+            <span class="transition-transform duration-200 group-hover:rotate-180">▼</span>
+          </div>
+          <ul class="ml-2 bg-red-800 rounded shadow-lg hidden group-hover:block z-10 p-2 text-sm text-red-100 space-y-1">
+            <li><a href="lichgrx.html" class="block hover:text-white transition duration-200">Lịch GroupX</a></li>
+            <li><a href="lichyoga.html" class="block hover:text-white transition duration-200">Lớp Yoga</a></li>
+          </ul>
+        </li>
+
+        <li class="group relative">
+          <div class="flex justify-between items-center cursor-pointer hover:text-white transition duration-200">
+            <span>Huấn luyện viên</span>
+            <span class="transition-transform duration-200 group-hover:rotate-180">▼</span>
+          </div>
+          <ul class="ml-2 bg-red-800 rounded shadow-lg hidden group-hover:block z-10 p-2 text-sm text-red-100 space-y-1">
+            <li><a href="ptnam.html" class="block hover:text-white transition duration-200">Healthy Coach</a></li>
+          </ul>
+        </li>
+
+        <li class="group relative">
+          <div class="flex justify-between items-center cursor-pointer hover:text-white transition duration-200">
+            <span>Ưu đãi thành viên</span>
+            <span class="transition-transform duration-200 group-hover:rotate-180">▼</span>
+          </div>
+          <ul class="ml-2 bg-red-800 rounded shadow-lg hidden group-hover:block z-10 p-2 text-sm text-red-100 space-y-1">
+            <li><a href="uudai1.html" class="block hover:text-white transition duration-200">Gói trải nghiệm 30 ngày ( 2 người )</a></li>
+            <li><a href="uudai2.html" class="block hover:text-white transition duration-200">Gói Việt Nam một đời khỏe</a></li>
+          </ul>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="flex-1 py-10 px-4 bg-white">
+      <h2 class="text-3xl font-bold text-red-700 mb-6">Các Gói Thẻ Tập Gym</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white text-gray-900 rounded-lg p-4 product hover:shadow-xl border border-red-100">
+          <img src="1.jpg" class="rounded mb-3 w-full">
+          <h3 class="text-xl font-bold text-red-600 mb-1">Thẻ 1 tháng</h3>
+          <p class="text-gray-700 mb-2">500.000đ</p>
+          <button onclick="addToCart('Thẻ 1 tháng', 500000)" class="bg-red-600 text-white hover:bg-red-700 w-full py-2 rounded transition duration-200">Thêm vào giỏ 🛒</button>
+        </div>
+
+        <div class="bg-white text-gray-900 rounded-lg p-4 product hover:shadow-xl border border-red-100">
+          <img src="2.jpg" class="rounded mb-3 w-full">
+          <h3 class="text-xl font-bold text-red-600 mb-1">Thẻ 3 tháng</h3>
+          <p class="text-gray-700 mb-2">1.350.000đ</p>
+          <button onclick="addToCart('Thẻ 3 tháng', 1350000)" class="bg-red-600 text-white hover:bg-red-700 w-full py-2 rounded transition duration-200">Thêm vào giỏ 🛒</button>
+        </div>
+
+        <div class="bg-white text-gray-900 rounded-lg p-4 product hover:shadow-xl border border-red-100">
+          <img src="4.jpg" class="rounded mb-3 w-full">
+          <h3 class="text-xl font-bold text-red-600 mb-1">Thẻ 6 tháng</h3>
+          <p class="text-gray-700 mb-2">2.500.000đ</p>
+          <button onclick="addToCart('Thẻ 6 tháng', 2500000)" class="bg-red-600 text-white hover:bg-red-700 w-full py-2 rounded transition duration-200">Thêm vào giỏ 🛒</button>
+        </div>
+
+        <div class="bg-white text-gray-900 rounded-lg p-4 product hover:shadow-xl border border-red-100">
+          <img src="3.jpg" class="rounded mb-3 w-full" >
+          <h3 class="text-xl font-bold text-red-600 mb-1">Thẻ 12 tháng</h3>
+          <p class="text-gray-700 mb-2">4.500.000đ</p>
+          <button onclick="addToCart('Thẻ 12 tháng', 4500000)" class="bg-red-600 text-white hover:bg-red-700 w-full py-2 rounded transition duration-200">Thêm vào giỏ 🛒</button>
+        </div>
+      </div>
+    </main>
+  </div>
+  <section id="features-section" class="section-padding bg-white">
+    <div style="text-align: center;" class="container mx-auto px-4">
+        <h1 class="text-red-700 font-extrabold mb-12">
+            NHỮNG ĐẶC QUYỀN CHỈ CÓ TẠI CORE FITNESS & YOGA
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="feature-box">
+                <h2>CHƯƠNG TRÌNH TẬP LUYỆN ĐA DẠNG</h2>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <h3>Tham gia không giới hạn 18.000 lớp GroupX và Yoga mỗi tháng</h3>
+
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                       <h3>Đa dạng chương trình Zumba, Classical Dance, Pop Dance, Body Pump, Body Combat, Cycling, Yoga Stretch, Meditation, Hatha, Power,…</h3>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <h3>Đội ngũ 150 Yogi Ấn Độ và 298 Huấn luyện viên GroupX, Les Mills</h3>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                       <h3>Hơn 1.000 Huấn luyện viên Sức Khỏe</h3>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                       <h3>Kiểm tra thể chất HYROX P'F"T miễn phí tại 37 câu lạc bộ toàn quốc</h3>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="feature-box">
+                <h2>CHĂM SÓC THỂ CHẤT & TINH THẦN TOÀN DIỆN</h2>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <h3>Kiểm tra chỉ số cơ, mỡ, khoáng chất</h3>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <h3>Phục hồi cơ bắp với 03 buổi Hypoxi công nghệ hút nén chân không</h3>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                        <h3>Face Scan đánh giá tuổi thọ, sức khỏe tinh thần và thể chất</h3>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                        </svg>
+                       <h3>Tích hợp dữ liệu, báo cáo sức khỏe và vận động trên ứng dụng LivWell</h3>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="feature-box md:col-span-2"> <h2>NHẬN THƯỞNG KHÔNG GIỚI HẠN VÀ TRẢI NGHIỆM TIỆN LỢI</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <h3>Quản lý thẻ hội viên điện tử</h3>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <h3>Giải thưởng hấp dẫn khi tham gia thử thách trên LivWell</h3>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <h3>Nhận miễn phí quà tặng từ hơn 80 thương hiệu</h3>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            <h3>Rủ bạn bè tham gia và cùng nhận thưởng</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq-section" class="section-padding bg-gray-50">
+    <div class="container mx-auto px-4 max-w-3xl">
+        <h2 class="text-red-700 font-extrabold mb-12">
+            CÂU HỎI THƯỜNG GẶP
+        </h2>
+        <div class="space-y-4">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>1. Thẻ trả theo tháng có giới hạn số lần check-in, địa điểm tập luyện trong ngày hay không?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Các gói Hội viên tháng của Core Fitness & Yoga được thiết kế linh hoạt. Đối với gói Gold và Platinum Plus, có giới hạn địa điểm tập luyện theo tỉnh/thành phố hoặc CLB cụ thể. Gói Diamond Plus cho phép truy cập tất cả CLB trên toàn quốc. Số lần check-in trong ngày thường không bị giới hạn, bạn có thể tập luyện bao nhiêu lần tùy thích trong giờ mở cửa của CLB.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>2. Các phương thức thanh toán nào được chấp nhận khi mua Gói tập tháng?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Chúng tôi chấp nhận thanh toán định kỳ với thẻ tín dụng qua cổng thanh toán điện tử. Giao dịch sẽ được thực hiện một lần và sẽ tự động gia hạn theo mỗi chu kỳ 30 ngày tính từ ngày bắt đầu. Đảm bảo rằng thẻ tín dụng của bạn có đủ số dư và hiệu lực trong suốt quá trình gia hạn.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>3. Gói Hội Viên Tháng có yêu cầu ký hợp đồng 12 tháng không?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Không. Gói Hội Viên Tháng được thiết kế để mang lại sự linh hoạt tối đa cho khách hàng, không yêu cầu cam kết hợp đồng dài hạn như 12 tháng. Bạn có thể dễ dàng quản lý việc gia hạn của mình.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>4. Quyền lợi Gói Hội Viên Tháng có khác gì Gói Hội Viên Thường Niên không?</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Gói Hội Viên Tháng mang lại sự linh hoạt cao hơn về thời gian cam kết. Trong khi đó, Gói Hội Viên Thường Niên (dài hạn hơn) thường đi kèm với mức giá ưu đãi hơn tính trên mỗi tháng và có thể có thêm một số quyền lợi hoặc dịch vụ bổ sung. Vui lòng liên hệ với tư vấn viên để biết chi tiết cụ thể về sự khác biệt giữa các gói và tìm ra lựa chọn tốt nhất cho bạn.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>5. Tham khảo lịch tập tại các CLB</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </div>
+                <div class="faq-answer">
+                    <p>Bạn có thể tham khảo lịch tập chi tiết của từng CLB trên trang web chính thức của Core Fitness & Yoga hoặc thông qua ứng dụng LivWell. Lịch tập thường được cập nhật thường xuyên, bao gồm các lớp GroupX, Yoga, và giờ hoạt động của các khu vực tập luyện.</p>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-12 text-gray-700">
+            <p class="text-lg">Bạn có câu hỏi khác? Đừng ngần ngại liên hệ với chúng tôi để được giải đáp!</p>
+            <a href="#contact-form" class="btn-select mt-4">GỬI CÂU HỎI</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact-form" class="section-padding bg-gray-100">
+    <div class="container mx-auto px-4 max-w-2xl">
+        <h2 class="text-red-700 font-extrabold mb-12">
+            ĐĂNG KÝ TƯ VẤN GÓI TẬP
+        </h2>
+        <div class="bg-white p-8 rounded-xl shadow-lg border-t-6 border-red-500">
+            <form class="space-y-6">
+                <div>
+                    <label for="contact-name" class="block text-gray-700 text-base font-semibold mb-2">Họ và tên <span class="text-red-500">*</span></label>
+                    <input type="text" id="contact-name" name="name" class="form-input" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div>
+                    <label for="contact-phone" class="block text-gray-700 text-base font-semibold mb-2">Số điện thoại <span class="text-red-500">*</span></label>
+                    <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="09xxxxxxxx" required>
+                </div>
+                <div>
+                    <label for="contact-city" class="block text-gray-700 text-base font-semibold mb-2">Bạn ở thành phố nào? <span class="text-red-500">*</span></label>
+                    <select id="contact-city" name="city" class="form-select" required>
+                        <option value="">-- Chọn Thành Phố --</option>
+                        <option value="HCM">TP. Hồ Chí Minh</option>
+                        <option value="HN">Hà Nội</option>
+                        <option value="DN">Đà Nẵng</option>
+                        <option value="NT">Nha Trang</option>
+                        <option value="BH">Biên Hòa</option>
+                        <option value="BD">Bình Dương</option>
+                        <option value="CT">Cần Thơ</option>
+                        <option value="VT">Vũng Tàu</option>
+                    </select>
+                </div>
+                <div class="flex items-start">
+                    <input type="checkbox" id="agree-terms-form" name="agreeTerms" class="mt-1 mr-2" required>
+                    <label for="agree-terms-form" class="text-gray-600 text-sm">
+                        Tôi đồng ý nhận thông tin từ Core Fitness & Yoga Center và đã đọc, hiểu, đồng ý với
+                        <a href="#" class="text-link">Chính sách Bảo mật</a> và
+                        <a href="#" class="text-link">Điều khoản Sử dụng</a>.
+                    </label>
+                </div>
+                <button type="submit" class="btn-select w-full mt-8">
+                    GỬI THÔNG TIN ĐĂNG KÝ
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+  <footer class="bg-red-700 text-red-100 py-8 mt-10">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-6">
+      <div>
+        <h4 class="text-white font-bold mb-2">Liên hệ</h4>
+        <p>Email: coregym@example.com</p>
+        <p>Điện thoại: 0909 123 456</p>
+        <p>Địa chỉ: 123 Lý Thường Kiệt, TP.HCM</p>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-2">Chính sách</h4>
+        <ul>
+          <li><a href="thanhtoan.html" class="block hover:text-white transition duration-200">Chính sách thanh toán </a></li>
+          <li><a href="baomat.html" class="block hover:text-white transition duration-200">Chính sách bảo mật</a></li>
+          <li><a href="khieunai.html" class="block hover:text-white transition duration-200">Chính sách giải quyết khiếu nại</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-bold mb-2">Mạng xã hội</h4>
+        <ul>
+            <li><a href="https://www.facebook.com/cfycvn/?locale=vi_VN" class="block hover:text-white transition duration-200">Facebook</a></li>
+            <li><a href="https://www.instagram.com/cfycvn/" class="block hover:text-white transition duration-200">Instagram</a></li>
+            <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Flink.cali.vn%2FMiniApp%3Ffbclid%3DIwZXh0bgNhZW0CMTAAAR3Y7AS86sP2wjb5Gmo12utEERb4jZFbA53I9L6yRm9MB6uSG6cc6rhpYPI_aem_XwNnK03cFnHKuCwa58ntwQ&h=AT1sCbREx7NOU5LOfR6X6d9ultIFcCT3gtGzhHDc20F5J86N3rcV4IiMprhbDh_RoPg-IRKmd_iSHqlxP_ZAHi1S57SJMviDgN7W0xHUiN4CQwVt6Io0yz0Zgdl2B8sEERb4jZFbA53I9L6yRm9MB6uSG6cc6rhpYPI_aem_XwNnK03cFnHKuCwa58ntwQ&__tn__=-UK-R&c%5B0%5D=AT2hkoHY1EEpyvT9NS7v6m1oiLxwuCE9r9WD54k2SXzsZaRM6UeesA4xYpf0aM2lmL-HZsXDoWZ5sEg_Ugy7rxRRIHWsd51Ks2HoS_WiJ8oHHRoqVZF08UkZd_vY1G32_nXPFL5i6y7FR9VPgKIrf1xotJ70AhH5VCyWRg9hDVFnxyyAcMKT_At7cvAwgHOYzZORO1kMj_acAYRY44pWmz4Q1yw" class="block hover:text-white transition duration-200">Zalo</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div id="chatbox-container">
+    <div id="chatbox-toggle" onclick="toggleChatbox()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    </div>
+    <div id="chatbox" class="hidden"> <div id="chatbox-header">
+        <span>Chat Hỗ Trợ</span>
+        <button onclick="toggleChatbox()" class="text-white">&times;</button>
+      </div>
+      <div id="chatbox-messages">
+        <div class="chatbox-message bot">Chào bạn! Tôi là chatbot hỗ trợ của GYMM & Yoga Center. Tôi có thể giúp gì cho bạn?</div>
+      </div>
+      <div id="chatbox-input-area">
+        <input type="text" id="chatbox-input" placeholder="Nhập tin nhắn của bạn..." />
+        <button id="chatbox-send-button" onclick="sendMessage()">Gửi</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let cart = [];
+
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      document.getElementById("cart-count").innerText = cart.length;
+      alert(`${name} đã được thêm vào giỏ hàng!`);
+    }
+
+    function viewCart() {
+      const cartItems = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+      cartItems.innerHTML = "";
+
+      let total = 0;
+      cart.forEach((item, index) => {
+        total += item.price;
+        cartItems.innerHTML += `
+          <div class="flex justify-between items-center border-b pb-2 text-gray-800">
+            <span>${item.name}</span>
+            <span>${item.price.toLocaleString()}đ</span>
+          </div>
+        `;
+      });
+
+      cartTotal.innerText = total.toLocaleString() + "đ";
+      document.getElementById("cart-modal").classList.remove("hidden");
+      document.getElementById("cart-modal").classList.add("flex");
+      // Ẩn mã QR khi mới mở giỏ hàng
+      document.getElementById("qr-code-section").classList.add("hidden");
+    }
+
+    function closeCart() {
+      document.getElementById("cart-modal").classList.add("hidden");
+    }
+
+    function toggleQrCode() {
+      const paymentMethod = document.getElementById("payment-method").value;
+      const qrCodeSection = document.getElementById("qr-code-section");
+      const qrCodeImage = document.getElementById("qr-code-image");
+      const qrCodeInfo = document.getElementById("qr-code-info");
+
+      if (paymentMethod === "bank-transfer") {
+        qrCodeSection.classList.remove("hidden");
+        // Thay thế bằng URL ảnh QR ngân hàng thực tế của bạn
+        qrCodeImage.src = "https://down-vn.img.susercontent.com/file/sg-11134201-22100-2cwzke2vi6iv8f"; 
+        qrCodeInfo.innerText = "Ngân hàng: BIDV\nSố tài khoản: 000000000000\nTên tài khoản: NGUYEN VAN A";
+      } else if (paymentMethod === "e-wallet") {
+        qrCodeSection.classList.remove("hidden");
+        // Thay thế bằng URL ảnh QR Momo/ZaloPay thực tế của bạn
+        qrCodeImage.src = "https://lead.com.vn/wp-content/uploads/2023/07/QRCODE-MOMO.jpg"; 
+        qrCodeInfo.innerText = "Ví điện tử: Momo/ZaloPay\nSố điện thoại: 0912345678";
+      } else {
+        qrCodeSection.classList.add("hidden");
+      }
+    }
+
+    function checkout() {
+      const name = document.getElementById("customer-name").value.trim();
+      const phone = document.getElementById("customer-phone").value.trim();
+      const email = document.getElementById("customer-email").value.trim();
+      const payment = document.getElementById("payment-method").value;
+
+      if (!name || !phone || !email) {
+        alert("Vui lòng điền đầy đủ thông tin khách hàng!");
+        return;
+      }
+
+      if (payment === "bank-transfer" || payment === "e-wallet") {
+          alert("Vui lòng quét mã QR để hoàn tất thanh toán!");
+          cart = [];
+          document.getElementById("cart-count").innerText = "0";
+          closeCart();
+      } else {
+          alert(`Cảm ơn ${name}, đơn hàng của bạn đã được ghi nhận!\nPhương thức thanh toán: ${payment}`);
+          cart = [];
+          document.getElementById("cart-count").innerText = "0";
+          closeCart();
+      }
+    }
+
+    // JavaScript cho Slideshow
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+
+    let autoSlideIndex = 0;
+    autoShowSlides();
+
+    function autoShowSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        autoSlideIndex++;
+        if (autoSlideIndex > slides.length) {autoSlideIndex = 1}
+        slides[autoSlideIndex-1].style.display = "block";
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[autoSlideIndex-1].className += " active";
+
+        setTimeout(autoShowSlides, 5000);
+    }
+
+    // --- JavaScript for Chatbox ---
+    function toggleChatbox() {
+      const chatbox = document.getElementById('chatbox');
+      // Use 'show' class for animating appearance/disappearance
+      chatbox.classList.toggle('show');
+    }
+
+    function sendMessage() {
+      const chatInput = document.getElementById('chatbox-input');
+      const message = chatInput.value.trim();
+      if (message === '') return;
+
+      appendMessage(message, 'user');
+      chatInput.value = '';
+
+      setTimeout(() => {
+        appendMessage(getBotResponse(message), 'bot');
+      }, 500);
+    }
+
+    function appendMessage(message, type) {
+      const chatMessages = document.getElementById('chatbox-messages');
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('chatbox-message', type);
+      messageDiv.innerText = message;
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight; // Auto scroll to bottom
+    }
+
+    function getBotResponse(userMessage) {
+      userMessage = userMessage.toLowerCase();
+      if (userMessage.includes('gói thẻ')) {
+        return 'Chúng tôi có các gói thẻ tập gym 1 tháng, 3 tháng, 6 tháng và 12 tháng. Bạn quan tâm gói nào ạ?';
+      } else if (userMessage.includes('giá')) {
+        return 'Giá các gói thẻ tập được hiển thị trên trang chủ. Bạn có thể xem chi tiết ở đó.';
+      } else if (userMessage.includes('đăng ký')) {
+        return 'Bạn có thể thêm thẻ tập vào giỏ hàng và tiến hành thanh toán để đăng ký online, hoặc đến trực tiếp phòng gym để được tư vấn thêm.';
+      } else if (userMessage.includes('địa chỉ')) {
+        return 'Bạn có thể tìm địa chỉ các CLB của chúng tôi trong mục "Danh sách CLB" ở thanh bên trái.';
+      } else if (userMessage.includes('lịch tập')) {
+        return 'Chúng tôi có lịch tập GroupX và Yoga. Bạn có thể xem lịch chi tiết trong mục "Lịch tập" ở thanh bên trái.';
+      } else if (userMessage.includes('chào') || userMessage.includes('xin chào')) {
+        return 'Chào bạn! Tôi có thể giúp gì cho bạn hôm nay?';
+      } else if (userMessage.includes('cảm ơn')) {
+          return 'Rất vui được hỗ trợ bạn!';
+      } else {
+        return 'Cảm ơn bạn đã quan tâm tới trang web, vui lòng đợi một chút. Chúng tôi sẽ kết nối bạn với nhân viên hỗ trợ sớm nhất có thể!'; // Đã thay đổi!
+      }
+    }
+
+    // Gửi tin nhắn khi nhấn Enter
+    document.getElementById('chatbox-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+
+    // On DOMContentLoaded, ensure chatbox starts hidden and remove 'hidden' if '.show' is used later
+    document.addEventListener('DOMContentLoaded', () => {
+      // The 'hidden' class is already in HTML, so no need to add it via JS initially unless
+      // you want to control initial state purely via JS.
+      // If you're using CSS transitions with .show, 'hidden' class would prevent transition.
+      // So, if using 'show' for visibility and animation, you might manage initial state
+      // by not having 'hidden' in HTML and adding 'hidden' to 'chatbox' here.
+      // For now, HTML has 'hidden', and .show class will handle actual visible state.
+      // This ensures chatbox is hidden by default and can be toggled by JS.
+    });
+
+  </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+      const faqQuestions = document.querySelectorAll('.faq-question');
+
+      faqQuestions.forEach(question => {
+          question.addEventListener('click', () => {
+              const faqItem = question.closest('.faq-item');
+              faqItem.classList.toggle('active');
+
+              const answer = faqItem.querySelector('.faq-answer');
+              if (faqItem.classList.contains('active')) {
+                  // Đặt max-height bằng scrollHeight + thêm một chút để đảm bảo không bị cắt
+                  answer.style.maxHeight = (answer.scrollHeight + 32) + "px"; // Thêm khoảng 32px (1rem trên + 1rem dưới + một chút dư)
+              } else {
+                  answer.style.maxHeight = "0";
+              }
+          });
+      });
+  });
+</script>
+</body>
+</html>

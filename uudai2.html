@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vóc Việt Nam Một Đời Khỏe - Gym Max & Yoga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff; /* Changed to white background */
+            color: #1a202c; /* Changed to dark gray for default text */
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .hero-section {
+            background-image: url(songkhoe.png); /* Placeholder for hero image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 80vh; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(185, 28, 28, 0.5) 0%, rgba(185, 28, 28, 0.8) 100%); /* Changed to red overlay */
+        }
+        h1 {
+            font-size: 3.5rem; /* text-6xl */
+            font-weight: 900; /* font-extrabold */
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        h2 {
+            font-size: 2.75rem; /* text-5xl */
+            font-weight: 800; /* font-extrabold */
+            color: #b91c1c; /* red-700 */ /* Adjusted for red-white theme */
+            margin-bottom: 3rem; /* mb-12 */
+            text-align: center;
+        }
+        h3 {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            color: #dc2626; /* red-600 */ /* Adjusted for red-white theme */
+            margin-top: 2.5rem; /* mt-10 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        p, li {
+            line-height: 1.75; /* leading-relaxed */
+            color: #2d3748; /* gray-800 for readability on white/light red backgrounds */
+        }
+        label {
+            color: #2d3748; /* gray-800 */
+        }
+        .btn-primary {
+            background-color: #ef4444; /* red-500 */
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 9999px; /* full rounded */
+            font-weight: 700; /* font-bold */
+            font-size: 1.25rem; /* text-xl */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            display: inline-block;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        .btn-primary:hover {
+            background-color: #dc2626; /* red-700 */
+            transform: translateY(-2px);
+        }
+        .card {
+            background-color: #ffffff; /* Changed to white for cards */
+            padding: 2.5rem; /* p-10 */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1); /* Lighter shadow */
+            border-top: 5px solid #ef4444; /* red-500 border top */
+            border-left: 1px solid #fecaca; /* red-200 border for consistency */
+            border-right: 1px solid #fecaca;
+            border-bottom: 1px solid #fecaca;
+        }
+        .form-input {
+            background-color: #ffffff; /* White input background */
+            border: 1px solid #fecaca; /* red-200 border */
+            color: #1a202c; /* dark gray text */
+            padding: 0.75rem 1rem;
+            border-radius: 0.375rem;
+            width: 100%;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-red-700 p-4 shadow-lg"> <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-white">GYM MAX & YOGA </a> <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="text-red-100 hover:text-white transition duration-200">Trang chủ</a></li> <li><a href="#contact-form" class="text-red-100 hover:text-white transition duration-200">Đăng ký</a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="z-10 p-4 max-w-4xl">
+            <h1 class="text-white text-4xl md:text-6xl lg:text-7xl font-extrabold uppercase leading-tight mb-6">
+                VÓC VIỆT NAM <br> MỘT ĐỜI KHỎE
+            </h1>
+            <p class="text-xl md:text-2xl text-red-100 mb-8 max-w-2xl mx-auto"> Cùng Gym Max & Yoga kiến tạo một Việt Nam khỏe mạnh, hạnh phúc và bền vững!
+            </p>
+            <a href="#contact-form" class="btn-primary">
+                ĐĂNG KÝ NGAY
+            </a>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white"> <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h2 class="text-red-700 text-4xl md:text-5xl font-extrabold mb-8"> Hành Trình Kiến Tạo Sức Khỏe Cho Người Việt
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-6"> "Vóc Việt Nam Một Đời Khỏe" là chiến dịch cộng đồng của Gym Max & Yoga, với sứ mệnh truyền cảm hứng và tạo động lực cho hàng triệu người Việt Nam nâng cao sức khỏe thể chất và tinh thần. Chúng tôi tin rằng một quốc gia khỏe mạnh bắt đầu từ những cá nhân khỏe mạnh.
+            </p>
+            <p class="text-lg md:text-xl text-gray-700"> Hãy cùng chúng tôi thay đổi vóc dáng, sống khỏe, và kiến tạo một tương lai tràn đầy năng lượng cho chính bạn và cộng đồng!
+            </p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-red-50"> <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-12">
+                NHỮNG GIÁ TRỊ MÀ CHÚNG TÔI MANG LẠI
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card text-center">
+                    <img src="vocdang.jpeg" alt="Thay đổi vóc dáng" class="w-28 h-28 object-contain mx-auto mb-6">
+                    <h3 class="text-2xl font-bold mb-3 text-red-600">THAY ĐỔI VÓC DÁNG</h3> <p class="text-gray-700">Lộ trình tập luyện cá nhân hóa, giúp bạn đạt được hình thể mơ ước một cách hiệu quả và an toàn.</p> </div>
+                <div class="card text-center">
+                    <img src="song.webp" alt="Sống khỏe toàn diện" class="w-28 h-28 object-contain mx-auto mb-6">
+                    <h3 class="text-2xl font-bold mb-3 text-red-600">SỐNG KHỎE TOÀN DIỆN</h3>
+                    <p class="text-gray-700">Tăng cường sức bền, cải thiện sức khỏe tim mạch và nâng cao chất lượng cuộc sống mỗi ngày.</p>
+                </div>
+                <div class="card text-center">
+                    <img src="tinhthan.png" alt="Nâng cao tinh thần" class="w-28 h-28 object-contain mx-auto mb-6">
+                    <h3 class="text-2xl font-bold mb-3 text-red-600">NÂNG CAO TINH THẦN</h3>
+                    <p class="text-gray-700">Giảm căng thẳng, tăng cường sự tập trung và mang lại tinh thần sảng khoái sau mỗi buổi tập.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white text-center"> <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-red-700 text-4xl md:text-5xl font-extrabold mb-8"> BẠN ĐÃ SẴN SÀNG CHO MỘT VÓC DÁNG KHỎE MẠNH?
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-700 mb-10"> Hãy cùng Gym Max & Yoga bắt đầu hành trình biến đổi bản thân ngay hôm nay!
+            </p>
+            <a href="#contact-form" class="btn-primary">
+                NHẬN TƯ VẤN MIỄN PHÍ
+            </a>
+        </div>
+    </section>
+
+    <section id="contact-form" class="section-padding bg-red-50"> <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12">
+                ĐĂNG KÝ ĐỂ BẮT ĐẦU
+            </h2>
+            <form class="space-y-6 bg-white p-8 rounded-lg shadow-xl border-t-4 border-red-500 border border-red-100"> <div>
+                    <label for="contact-name" class="block text-gray-800 text-sm font-bold mb-2">Họ và tên:</label> <input type="text" id="contact-name" name="name" class="form-input" placeholder="Nguyễn Văn A" required>
+                </div>
+                <div>
+                    <label for="contact-phone" class="block text-gray-800 text-sm font-bold mb-2">Số điện thoại:</label> <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="09xxxxxxxx" required>
+                </div>
+                <div>
+                    <label for="contact-email" class="block text-gray-800 text-sm font-bold mb-2">Email:</label> <input type="email" id="contact-email" name="email" class="form-input" placeholder="emailcuaban@example.com">
+                </div>
+                <div>
+                    <label for="contact-city" class="block text-gray-800 text-sm font-bold mb-2">Bạn ở thành phố nào?</label> <select id="contact-city" name="city" class="form-input" required>
+                        <option value="">-- Chọn Thành Phố --</option>
+                        <option value="HCM">TP. Hồ Chí Minh</option>
+                        <option value="HN">Hà Nội</option>
+                        <option value="DN">Đà Nẵng</option>
+                        <option value="NT">Nha Trang</option>
+                        <option value="BH">Biên Hòa</option>
+                        <option value="BD">Bình Dương</option>
+                        <option value="CT">Cần Thơ</option>
+                        <option value="VT">Vũng Tàu</option>
+                    </select>
+                </div>
+                <button type="submit" class="bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-red-700 transition duration-300 w-full">
+                    GỬI THÔNG TIN
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-red-700 text-red-100 py-8 text-center"> <div class="container mx-auto px-4">
+            <p>© 2025 Gym Max & Yoga Center. Tất cả quyền được bảo lưu.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-200">Chính sách bảo mật</a>
+                <a href="#" class="hover:text-white transition duration-200">Điều khoản sử dụng</a>
+                <a href="#" class="hover:text-white transition duration-200">Liên hệ</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

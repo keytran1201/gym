@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM MAX & YOGA CENTER - Huấn Luyện Viên Sức Khỏe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .section-padding {
+            padding: 80px 0; /* Khoảng cách trên dưới cho các section */
+        }
+        html {
+            scroll-behavior: smooth; /* Cuộn mượt khi click vào menu */
+        }
+        .btn-primary {
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #b91c1c; /* red-700 */
+        }
+        /* Overriding specific styles to fit the red-white theme */
+        h2 {
+            font-size: 2.5rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            color: #b91c1c; /* red-700 */ /* Adjusted for red-white theme */
+            margin-bottom: 3rem; /* mb-12 */
+            text-align: center;
+        }
+        h3 {
+            font-size: 2rem; /* text-3xl */
+            font-weight: 600; /* font-semibold */
+            color: #dc2626; /* red-600 */ /* Adjusted for red-white theme */
+            margin-top: 2.5rem; /* mt-10 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        p, li {
+            line-height: 1.75; /* leading-relaxed */
+            color: #2d3748; /* gray-800 */ /* Adjusted for red-white theme for readability on white background */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        ul.list-disc-indent {
+            list-style-type: disc;
+            margin-left: 1.5rem; /* ml-6 */
+        }
+        ul.list-disc-indent li {
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        /* Specific styles for red-white theme to ensure readability */
+        .text-gray-900 {
+            color: #1a202c;
+        }
+        .text-gray-700 {
+            color: #4a5568;
+        }
+        .text-gray-600 {
+            color: #718096;
+        }
+        .text-gray-400 { /* For footer links and contact info */
+            color: #a0aec0;
+        }
+        .shadow-red-500:hover { /* For hover effect on cards */
+            box-shadow: 0 10px 15px rgba(239, 68, 68, 0.3); /* red-500 shadow */
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <header class="bg-red-700 p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">GYM MAX HEALTH COACH</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-white hover:text-red-100 transition duration-200">Giới thiệu</a></li>
+                    <li><a href="#benefits" class="text-white hover:text-red-100 transition duration-200">Lợi ích</a></li>
+                    <li><a href="#approach" class="text-white hover:text-red-100 transition duration-200">Tiếp cận</a></li>
+                    <li><a href="#contact-form" class="text-white hover:text-red-100 transition duration-200">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center"
+        style="background-image: url(coach.jpeg);">
+        <div class="absolute inset-0 bg-red-800 opacity-60"></div> <div class="z-10 p-8 text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                HUẤN LUYỆN VIÊN SỨC KHỎE
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">
+                Người đồng hành đáng tin cậy trên hành trình sống khỏe của bạn
+            </p>
+            <a href="#contact-form" class="bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-red-700 transition duration-300 btn-primary">
+                ĐĂNG KÝ TƯ VẤN MIỄN PHÍ
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-red-50"> <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Huấn Luyện Viên Sức Khỏe Là Ai?</h2> <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="ne1.jpeg" alt="Health Coach" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed text-gray-800"> <p class="mb-4">
+                        Trong thế giới hiện đại bận rộn, việc duy trì một lối sống lành mạnh trở nên khó khăn hơn bao giờ hết. Đó là lúc **Huấn luyện viên Sức khỏe (Health Coach)** trở thành người bạn đồng hành không thể thiếu của bạn.
+                    </p>
+                    <p class="mb-4">
+                        Một Huấn luyện viên Sức khỏe không chỉ là người hướng dẫn tập luyện, mà còn là chuyên gia toàn diện về sức khỏe thể chất và tinh thần. Họ giúp bạn thiết lập mục tiêu, xây dựng thói quen tốt, và vượt qua những rào cản để đạt được phiên bản tốt nhất của chính mình.
+                    </p>
+                    <p>
+                        Với kiến thức chuyên sâu về dinh dưỡng, vận động, quản lý căng thẳng và các yếu tố lối sống khác, Huấn luyện viên Sức khỏe của Gym Max & Yoga sẽ mang đến một phương pháp tiếp cận cá nhân hóa, giúp bạn sống khỏe mạnh, hạnh phúc và tràn đầy năng lượng.
+                    </p>
+                    <h4 class="text-red-700 font-bold mb-2">Thông tin thêm</h4> <ul>
+                        <li><a href="web.html" class="block text-gray-800 hover:text-red-500 transition duration-200">Xem chi tiết Gói Tập & Tiện Ích</a></li> </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="section-padding bg-white"> <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Lợi Ích Khi Có Huấn Luyện Viên Sức Khỏe</h2> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100"> <img src="ne.png" alt="Lộ trình cá nhân" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Lộ trình cá nhân hóa</h3> <p class="text-gray-700">Thiết kế chương trình tập luyện, dinh dưỡng và lối sống phù hợp riêng với bạn.</p> </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100">
+                    <img src="dongluc.webp" alt="Động lực và trách nhiệm" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Động lực & Trách nhiệm</h3>
+                    <p class="text-gray-700">Luôn có người đồng hành, khích lệ và giữ bạn đi đúng hướng để đạt mục tiêu.</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100">
+                    <img src="kthuc.webp" alt="Kiến thức chuyên sâu" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Kiến thức chuyên sâu</h3>
+                    <p class="text-gray-700">Cung cấp thông tin khoa học về dinh dưỡng, tập luyện và sức khỏe toàn diện.</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100">
+                    <img src="rcan.jpeg" alt="Vượt qua rào cản" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Vượt qua rào cản</h3>
+                    <p class="text-gray-700">Giúp bạn đối phó với căng thẳng, thiếu ngủ và các yếu tố cản trở lối sống khỏe.</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100">
+                    <img src="kh.jpeg" alt="Thay đổi bền vững" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Thay đổi bền vững</h3>
+                    <p class="text-gray-700">Tạo dựng thói quen lành mạnh lâu dài, không chỉ là giải pháp tạm thời.</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100">
+                    <img src="cs.jpeg" alt="Nâng cao chất lượng cuộc sống" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Nâng cao chất lượng sống</h3>
+                    <p class="text-gray-700">Giúp bạn có một cuộc sống tràn đầy năng lượng, tích cực và cân bằng hơn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="approach" class="section-padding bg-red-50"> <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Cách Tiếp Cận Của Huấn Luyện Viên Sức Khỏe</h2> <div class="text-lg leading-relaxed space-y-8 text-gray-800"> <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">1. Đánh giá toàn diện</h3> <p>
+                        Huấn luyện viên sẽ bắt đầu bằng việc lắng nghe và đánh giá toàn diện về lối sống hiện tại của bạn, bao gồm thói quen ăn uống, mức độ hoạt động thể chất, tình trạng giấc ngủ, mức độ căng thẳng, và các mục tiêu sức khỏe cụ thể.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">2. Thiết lập mục tiêu SMART</h3>
+                    <p>
+                        Dựa trên đánh giá, PT sẽ cùng bạn thiết lập các mục tiêu SMART (Specific - Cụ thể, Measurable - Đo lường được, Achievable - Khả thi, Relevant - Liên quan, Time-bound - Có thời hạn) để đảm bảo lộ trình rõ ràng và hiệu quả.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">3. Xây dựng lộ trình cá nhân hóa</h3>
+                    <p>
+                        Từ dinh dưỡng, kế hoạch tập luyện, đến các kỹ thuật quản lý căng thẳng và cải thiện giấc ngủ, mọi thứ sẽ được thiết kế riêng cho bạn, dựa trên khoa học và phù hợp với lối sống của bạn.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">4. Đồng hành & Điều chỉnh</h3>
+                    <p>
+                        Huấn luyện viên sẽ đồng hành cùng bạn qua từng bước, theo dõi tiến độ, đưa ra lời khuyên, và điều chỉnh kế hoạch khi cần thiết để đảm bảo bạn luôn đi đúng hướng và vượt qua mọi thách thức.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white"> <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-12 text-red-700">Tại Sao Chọn Huấn Luyện Viên Sức Khỏe Tại Gym Max & Yoga?</h2> <div class="flex flex-col md:flex-row items-start gap-10 text-lg leading-relaxed text-gray-800"> <div class="md:w-1/2">
+                    <img src="cali.jpg" alt="Phòng tập California" class="rounded-lg shadow-xl mb-6 w-full h-auto border border-red-100"> <p>
+                        Gym Max & Yoga tự hào là hệ thống trung tâm thể dục thể hình hàng đầu Việt Nam với cơ sở vật chất đẳng cấp quốc tế, trang thiết bị hiện đại và không gian tập luyện chuyên nghiệp.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="cen.jpg" alt="PT chuyên nghiệp" class="rounded-lg shadow-xl mb-6 w-full h-auto border border-red-100"> <p>
+                        Đội ngũ Huấn luyện viên Sức khỏe của chúng tôi được đào tạo bài bản, có chứng chỉ quốc tế và kinh nghiệm dày dặn, luôn sẵn sàng lắng nghe và thấu hiểu mọi nhu cầu của bạn. Chúng tôi cam kết mang lại trải nghiệm tốt nhất và giúp bạn đạt được kết quả bền vững.
+                    </p>
+                    <p>
+                        Hãy để Gym Max & Yoga trở thành điểm tựa vững chắc trên hành trình kiến tạo sức khỏe và cuộc sống hạnh phúc của bạn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact-form" class="section-padding bg-red-50"> 
+    <div style="text-align: center;" class="container mx-auto px-4 max-w-2xl">
+        <h2 class="text-red-700 text-4xl md:text-5xl font-extrabold mb-8"> BẠN ĐÃ SẴN SÀNG CHO MỘT VÓC DÁNG KHỎE MẠNH?
+        </h2>
+        <p class="text-xl md:text-2xl text-gray-700 mb-10"> Hãy cùng Gym Max & Yoga bắt đầu hành trình biến đổi bản thân ngay hôm nay!
+        </p>
+        <a href="#contact-form" class="btn-primary">
+            NHẬN TƯ VẤN MIỄN PHÍ
+        </a>
+    </div>
+        <form class="space-y-6 bg-white p-8 rounded-lg shadow-xl border-t-4 border-red-500 border border-red-100"> <div>
+                <label for="contact-name" class="block text-gray-800 text-sm font-bold mb-2">Họ và tên:</label> <input type="text" id="contact-name" name="name" class="form-input" placeholder="Nguyễn Văn A" required>
+            </div>
+            <div>
+                <label for="contact-phone" class="block text-gray-800 text-sm font-bold mb-2">Số điện thoại:</label> <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="09xxxxxxxx" required>
+            </div>
+            <div>
+                <label for="contact-email" class="block text-gray-800 text-sm font-bold mb-2">Email:</label> <input type="email" id="contact-email" name="email" class="form-input" placeholder="emailcuaban@example.com">
+            </div>
+            <div>
+                <label for="contact-city" class="block text-gray-800 text-sm font-bold mb-2">Bạn ở thành phố nào?</label> <select id="contact-city" name="city" class="form-input" required>
+                    <option value="">-- Chọn Thành Phố --</option>
+                    <option value="HCM">TP. Hồ Chí Minh</option>
+                    <option value="HN">Hà Nội</option>
+                    <option value="DN">Đà Nẵng</option>
+                    <option value="NT">Nha Trang</option>
+                    <option value="BH">Biên Hòa</option>
+                    <option value="BD">Bình Dương</option>
+                    <option value="CT">Cần Thơ</option>
+                    <option value="VT">Vũng Tàu</option>
+                </select>
+            </div>
+            <button type="submit" class="bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-red-700 transition duration-300 w-full">
+                GỬI THÔNG TIN
+            </button>
+        </form>
+    </div>
+    <div class="mt-8 text-lg text-gray-800"> 
+        <p>Hoặc gọi cho chúng tôi: <strong class="text-red-700">(028) 7109 5999</strong></p> 
+    </div>
+</section>
+    <footer class="bg-red-700 text-red-100 py-8 text-center"> <div class="container mx-auto px-4">
+            <p>© 2025 Gym Max & Yoga Center. Tất cả quyền được bảo lưu.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-200">Chính sách bảo mật</a>
+                <a href="#" class="hover:text-white transition duration-200">Điều khoản sử dụng</a>
+                <a href="#" class="hover:text-white transition duration-200">Liên hệ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll cho các liên kết điều hướng
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Lấy chiều cao của header để cuộn chính xác
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

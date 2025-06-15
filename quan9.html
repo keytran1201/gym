@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GYM MAX & YOGA CENTER - Thủ Đức Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .section-padding {
+            padding: 80px 0; /* Khoảng cách trên dưới cho các section */
+        }
+        html {
+            scroll-behavior: smooth; /* Cuộn mượt khi click vào menu */
+        }
+        .btn-primary {
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #b91c1c; /* red-700 */
+        }
+
+        /* Specific styles for red-white theme */
+        .text-gray-900 {
+            color: #1a202c; /* Ensure dark text on white backgrounds */
+        }
+        .text-gray-700 {
+            color: #4a5568; /* Slightly lighter dark text */
+        }
+        .text-gray-600 {
+            color: #718096;
+        }
+        .text-gray-300 {
+            color: #cbd5e0; /* Lighter gray for specific elements if needed */
+        }
+
+        /* Adjust hover shadow for amenities/testimonials */
+        .shadow-red-500:hover {
+            box-shadow: 0 10px 15px rgba(239, 68, 68, 0.3); /* red-500 shadow */
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <header class="bg-red-700 p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Gym Max THỦ ĐỨC</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="text-white hover:text-red-100 transition duration-200">Giới thiệu</a></li>
+                    <li><a href="#amenities" class="text-white hover:text-red-100 transition duration-200">Tiện ích</a></li>
+                    <li><a href="#classes" class="text-white hover:text-red-100 transition duration-200">Lớp học</a></li>
+                    <li><a href="#contact" class="text-white hover:text-red-100 transition duration-200">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center"
+        style="background-image: url(td.jpeg);">
+        <div class="absolute inset-0 bg-red-800 opacity-60"></div> <div class="z-10 p-8 text-white">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                THỦ ĐỨC CLUB
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">
+                Trung tâm thể dục đẳng cấp dành cho cộng đồng Thủ Đức
+            </p>
+            <a href="#contact" class="bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-red-700 transition duration-300 btn-primary">
+                TRẢI NGHIỆM NGAY
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-red-50"> <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Giới thiệu về Gym Max Thủ Đức</h2> <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="tdc.jpeg" alt="Phòng tập Thủ Đức" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed text-gray-800"> <p class="mb-4">
+                        Nằm tại vị trí thuận tiện ở khu vực Thủ Đức sầm uất, **GYM MAX & YOGA Thủ Đức Club** là điểm đến lý tưởng cho những ai muốn cải thiện sức khỏe và vóc dáng. Chúng tôi mang đến một không gian tập luyện rộng rãi, thoải mái cùng với các dịch vụ và tiện ích hàng đầu.
+                    </p>
+                    <p class="mb-4">
+                        CLB được trang bị đầy đủ các loại máy tập hiện đại, khu vực tập tạ tự do, cùng với các phòng tập chuyên biệt cho Yoga và GroupX. Đội ngũ huấn luyện viên giàu kinh nghiệm và nhiệt huyết luôn sẵn sàng hỗ trợ bạn đạt được mục tiêu cá nhân.
+                    </p>
+                    <p>
+                        Hãy đến với Thủ Đức Club để trải nghiệm một phong cách sống năng động, khỏe mạnh và tham gia vào cộng đồng những người đam mê thể thao!
+                    </p>
+                    <h4 class="text-red-700 font-bold mb-2">Thông tin thêm</h4> <ul>
+                        <li><a href="web.html" class="block hover:text-red-500 transition duration-200">Xem chi tiết Gói Tập & Tiện Ích</a></li> </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="section-padding bg-white"> <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Tiện ích vượt trội</h2> <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100"> <img src="maymoc.jpeg" alt="Thiết bị hiện đại" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Hệ thống máy tập mới nhất</h3> <p class="text-gray-700">Đầy đủ các dòng máy cardio, máy tập cơ bắp và tạ tự do, đảm bảo mọi bài tập.</p> </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100">
+                    <img src="xonghoi.jpeg" alt="Phòng xông hơi" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Phòng xông hơi & thư giãn</h3>
+                    <p class="text-gray-700">Giúp bạn phục hồi cơ thể và thư giãn tinh thần sau những buổi tập cường độ cao.</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100">
+                    <img src="thoang.jpeg" alt="Không gian thoáng đãng" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">Không gian tập luyện rộng rãi</h3>
+                    <p class="text-gray-700">Thoải mái tập luyện mà không lo đông đúc, có khu vực riêng cho từng loại hình.</p>
+                </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center border border-red-100">
+                    <img src="hlv.jpeg" alt="Huấn luyện viên chuyên nghiệp" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-600">PT tận tâm & giàu kinh nghiệm</h3>
+                    <p class="text-gray-700">Đội ngũ huấn luyện viên được chứng nhận, xây dựng lộ trình tập luyện cá nhân hóa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="classes" class="section-padding bg-red-50"> <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Các Lớp Học Phổ Biến</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-6 border border-red-100"> <img src="grx.png" alt="GroupX" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-red-600">Lớp tập nhóm GroupX</h3> <p class="text-gray-700">Đa dạng các lớp từ Body Combat, Body Pump, Zumba đến CXWORX, mang lại năng lượng bùng nổ.</p> </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-6 border border-red-100">
+                    <img src="yoga.webp" alt="Yoga" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-red-600">Yoga & Thiền</h3>
+                        <p class="text-gray-700">Các lớp Yoga truyền thống và hiện đại giúp cải thiện sự linh hoạt, sức mạnh và bình yên tinh thần.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-6 border border-red-100">
+                    <img src="dance.jpeg" alt="Dance Fitness" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-red-600">Dance Fitness</h3>
+                        <p class="text-gray-700">Nhảy theo nhạc để đốt cháy calo và tăng cường sức bền, phù hợp với mọi cấp độ.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg flex items-center space-x-6 border border-red-100">
+                    <img src="dapxe.jpeg" alt="Cycling" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-red-600">Cycling Indoor</h3>
+                        <p class="text-gray-700">Những buổi đạp xe trong nhà đầy thử thách, nâng cao sức bền và sức mạnh đôi chân.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-padding bg-white"> <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Hội viên nói gì về Thủ Đức Club</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center border border-red-100"> <img src="kh1.png" alt="Hội viên 1" class="w-20 h-20 rounded-full object-cover mb-4">
+                    <p class="italic text-gray-700 mb-4">"Từ khi tham gia Gym Max Thủ Đức, tôi đã thay đổi hoàn toàn thói quen tập luyện. Phòng tập rộng, máy móc tốt và không khí rất năng động."</p> <p class="font-semibold text-red-600">- Nguyễn Văn H.</p> </div>
+                <div class="bg-red-50 p-6 rounded-lg shadow-lg flex flex-col items-center text-center border border-red-100">
+                    <img src="kh2.webp" alt="Hội viên 2" class="w-20 h-20 rounded-full object-cover mb-4">
+                    <p class="italic text-gray-700 mb-4">"Các lớp GroupX tại đây thực sự rất vui và hiệu quả. Tôi luôn cảm thấy tràn đầy năng lượng sau mỗi buổi tập. PT cũng rất nhiệt tình!"</p>
+                    <p class="font-semibold text-red-600">- Phạm Thị M.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-red-50"> <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Liên hệ & Địa chỉ Thủ Đức Club</h2> <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">Thông tin CLB</h3> <p class="mb-2 text-gray-800"><strong class="text-red-700">Địa chỉ:</strong> Lầu 3, Vincom Thủ Đức, 216 Võ Văn Ngân, P. Bình Thọ, TP. Thủ Đức (Giả lập)</p> <p class="mb-2 text-gray-800"><strong class="text-red-700">Điện thoại:</strong> (028) 7109 5999 (Giả lập)</p>
+                    <p class="mb-2 text-gray-800"><strong class="text-red-700">Email:</strong> thuduc@gymmax.vn (Giả lập)</p>
+                    <p class="mb-4 text-gray-800"><strong class="text-red-700">Giờ hoạt động:</strong> Thứ 2 - Thứ 6: 6:00 - 22:00 | Thứ 7 - Chủ Nhật: 8:00 - 21:00</p>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-red-600">Vị trí trên bản đồ</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.467406859367!2d106.69742447479708!3d10.775841689369298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f38f7129f79%3A0x35e0c526d11f0a2e!2sSaigon%20Centre!5e0!3m2!1svi!2svn!4v1717849684123!5m2!1svi!2svn"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-md border border-red-100"></iframe> </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-600">Gửi yêu cầu tư vấn</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name-contact" class="block text-gray-800 text-sm font-bold mb-2">Họ và tên:</label> <input type="text" id="name-contact" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-red-500 focus:ring-red-500 border-gray-300" placeholder="Tên của bạn">
+                        </div>
+                        <div>
+                            <label for="email-contact" class="block text-gray-800 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email-contact" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-red-500 focus:ring-red-500 border-gray-300" placeholder="Email của bạn">
+                        </div>
+                        <div>
+                            <label for="phone-contact" class="block text-gray-800 text-sm font-bold mb-2">Số điện thoại:</label>
+                            <input type="tel" id="phone-contact" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-red-500 focus:ring-red-500 border-gray-300" placeholder="Số điện thoại của bạn">
+                        </div>
+                        <div>
+                            <label for="message-contact" class="block text-gray-800 text-sm font-bold mb-2">Tin nhắn:</label>
+                            <textarea id="message-contact" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline focus:border-red-500 focus:ring-red-500 border-gray-300" placeholder="Bạn muốn tư vấn về điều gì?"></textarea>
+                        </div>
+                        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full font-semibold btn-primary">Gửi yêu cầu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-red-700 text-red-100 py-8 text-center"> <div class="container mx-auto px-4">
+            <p>© 2025 GYM MAX & YOGA CENTER. Tất cả quyền được bảo lưu.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white transition duration-200">Chính sách bảo mật</a>
+                <a href="#" class="hover:text-white transition duration-200">Điều khoản sử dụng</a>
+                <a href="#" class="hover:text-white transition duration-200">Liên hệ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll cho các liên kết điều hướng
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Lấy chiều cao của header để cuộn chính xác
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

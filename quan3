@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALIFORNIA FITNESS & YOGA CENTER - Lim Tower Club</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .section-padding {
+            padding: 80px 0; /* Khoảng cách trên dưới cho các section */
+        }
+        html {
+            scroll-behavior: smooth; /* Cuộn mượt khi click vào menu */
+        }
+        .btn-primary {
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #dc2626; /* red-700 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <header class="bg-red-700 p-4 sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">CALI LIM TOWER</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-red-300">Giới thiệu</a></li>
+                    <li><a href="#amenities" class="hover:text-red-300">Tiện ích</a></li>
+                    <li><a href="#classes" class="hover:text-red-300">Lớp học</a></li>
+                    <li><a href="#contact" class="hover:text-red-300">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative h-screen bg-cover bg-center flex items-center justify-center text-center"
+        style="background-image: url('https://i.imgur.com/vHq4R73.jpeg');"> <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="z-10 p-8">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                LIM TOWER CLUB
+            </h1>
+            <p class="text-xl md:text-2xl mb-8">
+                Trung tâm đẳng cấp quốc tế ngay giữa lòng Quận 3
+            </p>
+            <a href="#contact" class="bg-red-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-red-700 transition duration-300 btn-primary">
+                ĐĂNG KÝ NGAY
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-500">Chào mừng đến với Lim Tower Club</h2>
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="md:w-1/2">
+                    <img src="https://i.imgur.com/kKjX5WJ.jpeg" alt="Phòng tập Lim Tower" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+                <div class="md:w-1/2 text-lg leading-relaxed">
+                    <p class="mb-4">
+                        Nằm trong tòa nhà Lim Tower 3 hiện đại, **California Fitness & Yoga Lim Tower Club** mang đến không gian tập luyện sang trọng, tiện nghi và hiện đại bậc nhất Quận 3. Với vị trí thuận lợi, đây là điểm đến lý tưởng cho những ai tìm kiếm sự kết hợp hoàn hảo giữa thể chất và phong cách sống đô thị.
+                    </p>
+                    <p class="mb-4">
+                        Chúng tôi tự hào cung cấp hệ thống máy móc tập luyện Technogym tiên tiến, khu vực tập Yoga và GroupX rộng rãi, cùng các dịch vụ xông hơi, phòng tắm cao cấp. Đội ngũ huấn luyện viên giàu kinh nghiệm luôn sẵn sàng đồng hành cùng bạn trên hành trình chinh phục mọi mục tiêu sức khỏe.
+                    </p>
+                    <p>
+                        Hãy trải nghiệm sự khác biệt tại Lim Tower Club – nơi mỗi buổi tập là một hành trình khám phá tiềm năng bản thân và nâng tầm chất lượng cuộc sống.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="amenities" class="section-padding bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-500">Tiện ích nổi bật</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center">
+                    <img src="https://i.imgur.com/zW7jQzU.png" alt="Máy móc hiện đại" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-400">Máy móc Technogym hiện đại</h3>
+                    <p class="text-gray-300">Trang thiết bị đẳng cấp quốc tế, hỗ trợ mọi bài tập từ cơ bản đến nâng cao.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center">
+                    <img src="https://i.imgur.com/f2L4A8c.png" alt="Phòng xông hơi" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-400">Phòng xông hơi khô & ướt</h3>
+                    <p class="text-gray-300">Thư giãn và phục hồi cơ bắp sau buổi tập với không gian xông hơi cao cấp.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center">
+                    <img src="https://i.imgur.com/A6D3hUj.png" alt="Phòng tắm riêng" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-400">Phòng tắm riêng tư</h3>
+                    <p class="text-gray-300">Không gian thay đồ và phòng tắm cá nhân, tiện nghi và sạch sẽ.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-red-500 transition-shadow duration-300 text-center">
+                    <img src="https://i.imgur.com/t335rYp.png" alt="Đội ngũ PT" class="w-24 h-24 mx-auto mb-4 object-contain">
+                    <h3 class="text-xl font-bold mb-2 text-red-400">Đội ngũ PT chuyên nghiệp</h3>
+                    <p class="text-gray-300">Huấn luyện viên tận tâm, đạt chuẩn quốc tế, giúp bạn tối ưu hiệu quả tập luyện.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="classes" class="section-padding bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-500">Các lớp học & Chương trình</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex items-center space-x-6">
+                    <img src="https://i.imgur.com/k6x3E6X.png" alt="GroupX" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-red-400">GroupX (Các lớp nhóm)</h3>
+                        <p class="text-gray-300">Các lớp học bản quyền quốc tế như Body Combat, Body Pump, Zumba, RPM... với huấn luyện viên đẳng cấp và âm nhạc sôi động.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex items-center space-x-6">
+                    <img src="https://i.imgur.com/w4mKj4w.png" alt="Yoga" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-red-400">Yoga & Thiền</h3>
+                        <p class="text-gray-300">Tìm lại sự bình yên và dẻo dai với đa dạng các phong cách Yoga: Hatha, Vinyasa, Ashtanga, Aerial Yoga...</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex items-center space-x-6">
+                    <img src="https://i.imgur.com/eBw2s2l.png" alt="Strength Training" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-red-400">Huấn luyện Sức mạnh</h3>
+                        <p class="text-gray-300">Tăng cường sức mạnh, xây dựng cơ bắp với khu vực tạ tự do, máy khối và sự hướng dẫn của PT chuyên nghiệp.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex items-center space-x-6">
+                    <img src="https://i.imgur.com/D4s6h2i.png" alt="Dance" class="w-20 h-20 rounded-full object-cover flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2 text-red-400">Dance & Cardio</h3>
+                        <p class="text-gray-300">Các lớp nhảy Zumba, sexy dance, và các bài tập cardio cường độ cao giúp đốt cháy calo hiệu quả.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section-padding bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-500">Lời chứng thực từ hội viên</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <img src="https://via.placeholder.com/100/FF0000/FFFFFF?text=NV1" alt="Hội viên 1" class="w-20 h-20 rounded-full object-cover mb-4">
+                    <p class="italic text-gray-300 mb-4">"CLB Lim Tower là nơi tôi tìm thấy động lực để tập luyện mỗi ngày. Không gian sang trọng, sạch sẽ và đội ngũ PT cực kỳ chuyên nghiệp. Tôi yêu nơi này!"</p>
+                    <p class="font-semibold text-red-400">- Nguyễn A. Thư</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg flex flex-col items-center text-center">
+                    <img src="https://via.placeholder.com/100/00FF00/FFFFFF?text=NV2" alt="Hội viên 2" class="w-20 h-20 rounded-full object-cover mb-4">
+                    <p class="italic text-gray-300 mb-4">"Các lớp Yoga tại Lim Tower rất chất lượng, giúp tôi thư giãn và cải thiện đáng kể sự linh hoạt. Tôi đặc biệt thích không gian yên tĩnh và tầm nhìn đẹp từ phòng tập."</p>
+                    <p class="font-semibold text-red-400">- Lê Minh P.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-500">Liên hệ & Địa chỉ</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-400">Thông tin CLB</h3>
+                    <p class="mb-2"><strong class="text-red-300">Địa chỉ:</strong> Lầu 4, Lim Tower 3, 29A Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1 (Giả lập, thực tế là Quận 3)</p>
+                    <p class="mb-2"><strong class="text-red-300">Điện thoại:</strong> (028) 7108 5999 (Giả lập)</p>
+                    <p class="mb-2"><strong class="text-red-300">Email:</strong> limtower@cali.vn (Giả lập)</p>
+                    <p class="mb-4"><strong class="text-red-300">Giờ hoạt động:</strong> Thứ 2 - Thứ 6: 6:00 - 22:00 | Thứ 7 - Chủ Nhật: 8:00 - 21:00</p>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-4 text-red-400">Vị trí trên bản đồ</h3>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.2427091216597!2d106.6924840748109!3d10.793751789311226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4m3!3m2!1d10.793839799999999!2d106.6953293!5e0!3m2!1svi!2s!4v1717849187373!5m2!1svi!2s"
+                            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-md"></iframe>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-400">Gửi yêu cầu tư vấn</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name-contact" class="block text-gray-300 text-sm font-bold mb-2">Họ và tên:</label>
+                            <input type="text" id="name-contact" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Tên của bạn">
+                        </div>
+                        <div>
+                            <label for="email-contact" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email-contact" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Email của bạn">
+                        </div>
+                        <div>
+                            <label for="phone-contact" class="block text-gray-300 text-sm font-bold mb-2">Số điện thoại:</label>
+                            <input type="tel" id="phone-contact" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Số điện thoại của bạn">
+                        </div>
+                        <div>
+                            <label for="message-contact" class="block text-gray-300 text-sm font-bold mb-2">Tin nhắn:</label>
+                            <textarea id="message-contact" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Bạn muốn tư vấn về điều gì?"></textarea>
+                        </div>
+                        <button type="submit" class="bg-red-600 text-white px-6 py-2 rounded-full font-semibold btn-primary">Gửi yêu cầu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 text-gray-400 py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>© 2025 California Fitness & Yoga Center. Tất cả quyền được bảo lưu.</p>
+            <div class="mt-4 space-x-4">
+                <a href="#" class="hover:text-white">Chính sách bảo mật</a>
+                <a href="#" class="hover:text-white">Điều khoản sử dụng</a>
+                <a href="#" class="hover:text-white">Liên hệ</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll cho các liên kết điều hướng
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Lấy chiều cao của header để cuộn chính xác
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
